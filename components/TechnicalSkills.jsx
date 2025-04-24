@@ -2,21 +2,20 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-// Define the skills data directly in the component to avoid import issues
 const skills = {
   frontend: [
-    { name: "React.js", percentage: 90 },
-    { name: "HTML/CSS", percentage: 95 },
-    { name: "JavaScript", percentage: 85 },
+    { name: "React.js", percentage: 75 },
+    { name: "HTML/CSS", percentage: 85 },
+    { name: "JavaScript", percentage: 80 },
     { name: "Tailwind CSS", percentage: 90 },
-    { name: "Next.js", percentage: 80 },
+    { name: "Next.js", percentage: 60 },
   ],
   backend: [
-    { name: "Node.js", percentage: 85 },
+    { name: "Node.js", percentage: 75 },
     { name: "Express.js", percentage: 80 },
-    { name: "MongoDB", percentage: 75 },
-    { name: "RESTful APIs", percentage: 90 },
-    { name: "Web Security", percentage: 80 },
+    { name: "MongoDB", percentage: 70 },
+    { name: "RESTful APIs", percentage: 80 },
+    { name: "Web Security", percentage: 75 },
   ],
 }
 
