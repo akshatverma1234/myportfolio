@@ -28,7 +28,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "portfoliobackend-production-90ad.up.railway.app/api/contact",
+        "https://portfoliobackend-production-90ad.up.railway.app/api/contact",
         formData
       )
       if (response.status === 200) {
