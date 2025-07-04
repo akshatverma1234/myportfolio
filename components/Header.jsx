@@ -1,15 +1,15 @@
-"use client"
-import React from "react"
-import { motion } from "framer-motion"
-import { assets } from "@/assets/assets"
-import Image from "next/image"
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { assets } from "@/assets/assets";
+import Image from "next/image";
 
 const Heading = () => {
   const scrollToContact = (e) => {
-    e.preventDefault()
-    const contact = document.getElementById("contact")
-    if (contact) contact.scrollIntoView({ behavior: "smooth" })
-  }
+    e.preventDefault();
+    const contact = document.getElementById("contact");
+    if (contact) contact.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div
@@ -130,21 +130,16 @@ const Heading = () => {
             </motion.span>
           </a>
 
-          <a
-            href="/resume.pdf"
-            download
-            className="group px-10 py-3 rounded-full border border-gray-500 hover:border-white flex items-center gap-2 transition-all duration-300 bg-transparent hover:bg-gray-800"
-          >
-            My Resume
-            <motion.span whileHover={{ y: 4 }} transition={{ duration: 0.2 }}>
-              <Image
-                src={assets.download_icon}
-                alt="download"
-                width={20}
-                height={20}
-              />
-            </motion.span>
-          </a>
+          <div className="flex gap-4">
+            <a
+              href="Akshat Verma_Web_Developer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              View Resume
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -180,7 +175,7 @@ const Heading = () => {
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Heading
+export default Heading;

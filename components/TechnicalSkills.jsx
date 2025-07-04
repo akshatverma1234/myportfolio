@@ -1,24 +1,31 @@
-"use client"
-import React from "react"
-import { motion } from "framer-motion"
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
-// Define the skills data directly in the component to avoid import issues
 const skills = {
   frontend: [
-    { name: "React.js", percentage: 90 },
-    { name: "HTML/CSS", percentage: 95 },
-    { name: "JavaScript", percentage: 85 },
+    { name: "React.js", percentage: 75 },
+    { name: "HTML/CSS", percentage: 85 },
+    { name: "JavaScript", percentage: 80 },
     { name: "Tailwind CSS", percentage: 90 },
-    { name: "Next.js", percentage: 80 },
+    { name: "Next.js", percentage: 75 },
+    { name: "Redux", percentage: 70 },
   ],
   backend: [
-    { name: "Node.js", percentage: 85 },
+    { name: "Node.js", percentage: 75 },
     { name: "Express.js", percentage: 80 },
     { name: "MongoDB", percentage: 75 },
-    { name: "RESTful APIs", percentage: 90 },
-    { name: "Web Security", percentage: 80 },
+    { name: "RESTful APIs", percentage: 80 },
+    { name: "Web Security", percentage: 75 },
   ],
-}
+  tools: [
+    { name: "Git & GitHub", percentage: 80 },
+    { name: "Postman", percentage: 75 },
+    { name: "Vite", percentage: 70 },
+    { name: "ESLint & Prettier", percentage: 75 },
+    { name: "Chrome DevTools", percentage: 85 },
+  ],
+};
 
 const SkillBar = ({ name, percentage }) => {
   return (
@@ -37,8 +44,8 @@ const SkillBar = ({ name, percentage }) => {
         ></motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const TechnicalSkills = () => {
   return (
@@ -62,7 +69,7 @@ const TechnicalSkills = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-3 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -114,10 +121,35 @@ const TechnicalSkills = () => {
               ))}
             </div>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-2xl font-semibold mb-8 relative">
+              Tools & Technologies
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mt-2 rounded"></div>
+            </h3>
+
+            <div className="space-y-6">
+              {skills.tools.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  <SkillBar name={skill.name} percentage={skill.percentage} />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TechnicalSkills
+export default TechnicalSkills;
