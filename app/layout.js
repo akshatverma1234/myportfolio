@@ -31,16 +31,16 @@ export const metadata = {
   authors: [{ name: "Akshat Verma" }],
   creator: "Akshat Verma",
   publisher: "Akshat Verma",
-  metadataBase: new URL("https://your-portfolio-domain.com"), // replace with your domain
+  metadataBase: new URL("https://akshatverma.vercel.app/"),
   openGraph: {
     title: "Akshat Verma | Full Stack Developer & Cybersecurity Enthusiast",
     description:
       "Explore Akshat Verma's portfolio – Full Stack projects, Cybersecurity initiatives, and professional achievements.",
-    url: "https://your-portfolio-domain.com",
+    url: "https://akshatverma.vercel.app/",
     siteName: "Akshat Verma Portfolio",
     images: [
       {
-        url: "./og_image",
+        url: "/og_image.png",
         width: 1200,
         height: 630,
         alt: "Akshat Verma Portfolio Preview",
@@ -55,7 +55,7 @@ export const metadata = {
     description:
       "Check out my portfolio showcasing Full Stack development and cybersecurity projects.",
     creator: "@AkshatV62764804",
-    images: ["./og_image"],
+    images: ["/og_image.png"],
   },
   icons: {
     icon: "/favicon.ico",
