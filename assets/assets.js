@@ -39,6 +39,7 @@ import github from "./public/github.png";
 import express from "./public/express.png";
 import leetcode from "./public/LeetCode_logo_black.png";
 import zipnfile from "./public/Screenshot 2025-04-15 100146.png";
+import sih from "./public/sih.png";
 import musicapp from "./public/image.png";
 import logImage from "./public/Screenshot 2025-04-12 204544.png";
 import jewelleryicon from "./public/Screenshot 2025-07-04 190333.png";
@@ -92,6 +93,7 @@ export const assets = {
   musicapp,
   logImage,
   jewelleryicon,
+  sih,
 };
 
 export const workData = [
@@ -192,6 +194,14 @@ export const skills = {
   ],
 };
 export const projects = [
+  {
+    title: "Security Insight Hub",
+    description:
+      "Security Insight Hub is a cybersecurity-focused platform that provides articles, insights, and community contributions on InfoSec, ethical hacking, AI in security, and emerging technologies, helping learners and professionals stay updated and aware",
+    techStack: ["Next.js", "Tailwind CSS", "MongoDB", "MUI"],
+    image: sih,
+    demoLink: "https://securityinsighthub.vercel.app/",
+  },
   {
     title: "ZipNFile",
     description:
